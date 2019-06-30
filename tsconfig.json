@@ -18,6 +18,10 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "@api/*": ["src/app/api/*"],
+      "@uitl/*": ["src/app/util/*"]
+    }
   }
 }

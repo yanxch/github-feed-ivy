@@ -1,0 +1,19 @@
+<!-- 
+1. Commits Loaded By Service Container
+-->
+<card centered> 
+  <card-header avatar="github-avatar">
+    <card-header-title>Github Commits</card-header-title>
+    <card-header-subtitle>Search</card-header-subtitle>
+  </card-header>
+  <github-search-form [username]="username$ | async" (onSubmit)="search($event)"></github-search-form>
+  <github-search-result>
+    <avatar-container [username]="username$ | async" #avatar>
+      <commits-container [username]="username$ | async" #container>
+        <commits [commits]="container.commits" [avatarUrl]="avatar.avatarUrl"></commits>
+        <failure [failures]="container.failures"></failure>
+      </commits-container>
+    </avatar-container>
+  </github-search-result>
+</card>
+
