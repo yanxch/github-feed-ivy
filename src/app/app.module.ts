@@ -18,7 +18,7 @@ import {RouteParamsDirective} from './components/router/route-params.directive';
 import {LoadingComponent} from './components/loading/loading.component';
 import {RouteComponent} from './components/router/route.component';
 import {HttpClientModule} from '@angular/common/http';
-import {AvatarContainer} from './container/avatar.container';
+import {UserContainer} from './container/user.container';
 
 @NgModule({
   declarations: [
@@ -40,7 +40,7 @@ import {AvatarContainer} from './container/avatar.container';
     //
     // Container
     CommitsContainer,
-    AvatarContainer,
+    UserContainer,
     //
     // Views
     CommitsView

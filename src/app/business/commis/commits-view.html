@@ -8,12 +8,14 @@
   </card-header>
   <github-search-form [username]="username$ | async" (onSubmit)="search($event)"></github-search-form>
   <github-search-result>
-    <avatar-container [username]="username$ | async" #avatar>
+
+    <user-container [username]="username$ | async" #user>
       <commits-container [username]="username$ | async" #container>
-        <commits [commits]="container.commits" [avatarUrl]="avatar.avatarUrl"></commits>
+        <commits [commits]="container.commits" [avatarUrl]="user.avatarUrl"></commits>
         <failure [failures]="container.failures"></failure>
       </commits-container>
-    </avatar-container>
+    </user-container>
+    
   </github-search-result>
 </card>
 

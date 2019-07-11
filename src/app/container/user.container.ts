@@ -5,6 +5,7 @@ import {Commit} from '@api/commits/commit';
 import {Failure} from '@api/failure/failure';
 import {UserService} from '@api/user/user.service';
 import {DomSanitizer} from '@angular/platform-browser';
+import { User } from '@api/user/user';
 
 /*
   It is the first design descision:
@@ -13,11 +14,11 @@ import {DomSanitizer} from '@angular/platform-browser';
   A container does not have styles nor any template for itself!
  */
 @Component({
-  selector: 'avatar-container',
+  selector: 'user-container',
   template: '<ng-content></ng-content>',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class AvatarContainer implements OnChanges {
+export class UserContainer implements OnChanges {
 
   @Input() username: string;
 
@@ -31,14 +32,13 @@ export class AvatarContainer implements OnChanges {
   }
 
   loadAvatar = (username: string) => {
-    this.userService.readAvatar(username)
+    this.userService.readUser(username)
       .then(this.handleSuccess)
       .catch(this.handleFailure);
   }
 
-  handleSuccess = (image: Blob) => {
-    console.log(image);
-    this.avatarUrl = this.sanitizer.bypassSecurityTrustResourceUrl(URL.createObjectURL(image));
+  handleSuccess = (user: User) => {
+    this.avatarUrl = user.avatarUrl;
   }
 
   handleFailure = () => {
