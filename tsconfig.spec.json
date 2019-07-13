@@ -5,7 +5,12 @@
     "types": [
       "jest",
       "node"
-    ]
+    ],
+    "paths": {
+      "@api/*": ["src/app/api/*"],
+      "@util/*": ["src/app/util/*"]
+    },
+    "esModuleInterop": true
   },
   "files": [
     "src/polyfills.ts"

@@ -24,7 +24,7 @@
     ],
     "paths": {
       "@api/*": ["src/app/api/*"],
-      "@uitl/*": ["src/app/util/*"]
+      "@util/*": ["src/app/util/*"]
     }
   }
 }

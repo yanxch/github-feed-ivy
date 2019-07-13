@@ -12,7 +12,7 @@ import { GithubSearchResultComponent } from './components/github-search-result/g
 import { CommitsComponent } from './components/commits/commits.component';
 import { FailureComponent } from './components/failure/failure.component';
 import { CommitsContainer } from './container/commits.container';
-import {CommitsView} from './business/commis/commits-view';
+import {CommitsView} from './business/commits/commits-view';
 import {CenteredDirective} from './components/centered/centered.directive';
 import {RouteParamsDirective} from './components/router/route-params.directive';
 import {LoadingComponent} from './components/loading/loading.component';

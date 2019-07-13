@@ -1,7 +1,7 @@
 # GithubFeedIvy
 
 * Add Jest (/)
-* Add Angular-Testing-Library
+* Add Angular-Testing-Library (/)
 * Test it!
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.3.

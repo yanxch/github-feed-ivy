@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import {CommitsView} from './business/commis/commits-view';
+import {CommitsView} from './business/commits/commits-view';
 
 const routes: Routes = [
   {

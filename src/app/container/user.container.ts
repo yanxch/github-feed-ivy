@@ -1,6 +1,6 @@
 import {ChangeDetectionStrategy, Component, Input, OnChanges, SimpleChanges} from '@angular/core';
 import {CommitsService} from '@api/commits/commits.service';
-import {onChange} from '@uitl/input-changed';
+import {onChange} from '@util/input-changed';
 import {Commit} from '@api/commits/commit';
 import {Failure} from '@api/failure/failure';
 import {UserService} from '@api/user/user.service';
